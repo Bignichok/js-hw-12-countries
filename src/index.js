@@ -1,13 +1,8 @@
-import './styles.css';
-import '@pnotify/core/dist/BrightTheme.css';
+import './styles.scss';
 import renderMarkup from './js/renderMarkup';
 import fetchCountries from './js/fetchCountries';
-
-import { debounce } from 'lodash';
-
-import { error, defaultModules } from '@pnotify/core';
-import * as PNotifyMobile from '@pnotify/mobile';
-defaultModules.set(PNotifyMobile, {});
+import error from './js/pnotify';
+import debounce from 'lodash-es/debounce';
 
 const searchInput = document.querySelector('.search-input');
 const countriesList = document.querySelector('.countries-list');
